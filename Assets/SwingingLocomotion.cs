@@ -1,52 +1,94 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SwingingLocomotion : MonoBehaviour
 {
-    // Start is called before the first frame update
- 
-    public GameObject LeftHand;
-    public GameObject RightHand;
+    // Game Objects
+    public GameObject LeftController;
+    public GameObject RightController;
     public GameObject Camera;
-    public GameObject forwardDirection;
-    public float Speed = 70;
-    private Vector3 PositionPreviousFrameLeftHand;
-    private Vector3 PositionPreviousFrameRightHand;
+    public GameObject Direction;
+
+    //Vector3 Positions
+    private Vector3 PositionPreviousFrameLeftController;
+    private Vector3 PositionPreviousFrameRightController;
     private Vector3 PlayerPositionPreviousFrame;
-    private Vector3 PlayerPositionThisFrame;
-    private Vector3 PlayerPositionThisFrameLeftHand;
-    private Vector3 PlayerPositionThisFrameRightHand;
-    private float HandSpeed;
+    private Vector3 PlayerPositionCurrentFrame;
+    private Vector3 PositionCurrentFrameLeftController;
+    private Vector3 PositionCurrentFrameRightController;
+
+    public float Speed;
+    private float ControllerSpeed;
+
+    public InputActionReference rightTrigger;
+    public InputActionReference leftTrigger;
+
+
     void Start()
     {
-         PlayerPositionPreviousFrame = transform.position;
-         PositionPreviousFrameLeftHand = LeftHand.transform.position;
-         PositionPreviousFrameRightHand = RightHand.transform.position;
+        /**
+        Sets starting position of player and controllers.
+        */
+        PlayerPositionPreviousFrame = transform.position; 
+        PositionPreviousFrameLeftController = LeftController.transform.position; 
+        PositionPreviousFrameRightController = RightController.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /**
+        Checks to see if user is holding the triggers
+        0.0f is when the trigger is not being held but if it is it should be greater than 0.0f
+        */
+         if(rightTrigger.action.ReadValue<float>() > 0.0f && leftTrigger.action.ReadValue<float>() > 0.0f){
+          
+        
+        /**
+        Sets the direction to wherever the camera is currently facing(Says the direction im going to walk is
+         in front of camera)
+        */
         float yRotation = Camera.transform.eulerAngles.y;
-        forwardDirection.transform.eulerAngles = new Vector3(0,yRotation,0);
+        Direction.transform.eulerAngles = new Vector3(0, yRotation, 0);
+        
+        /**
+        Gets current position of player and  controllers
+        */
+        PositionCurrentFrameLeftController = LeftController.transform.position;
+        PositionCurrentFrameRightController = RightController.transform.position;
+        PlayerPositionCurrentFrame = transform.position;
 
-        PlayerPositionThisFrameLeftHand = LeftHand.transform.position;
-        PlayerPositionThisFrameRightHand = RightHand.transform.position;
-        PlayerPositionThisFrame = transform.position;
+  
 
-        var PlayerDistanceMoved = Vector3.Distance(PlayerPositionThisFrame,PlayerPositionPreviousFrame);
-        var LeftHandDistanceMoved = Vector3.Distance(PositionPreviousFrameLeftHand,PlayerPositionThisFrameLeftHand);
-        var RightHandDistanceMoved = Vector3.Distance(PositionPreviousFrameRightHand,PlayerPositionThisFrameRightHand);
+        /**
+        Gets the total distance controller and player have moved since last frame(update call)
+        */
+        var playerDistanceMoved = Vector3.Distance(PlayerPositionCurrentFrame, PlayerPositionPreviousFrame);
+        var leftControllerDistanceMoved = Vector3.Distance(PositionPreviousFrameLeftController, PositionCurrentFrameLeftController);
+        var rightControllerDistanceMoved = Vector3.Distance(PositionPreviousFrameRightController, PositionCurrentFrameRightController);
 
-        HandSpeed = ((LeftHandDistanceMoved - PlayerDistanceMoved) + (RightHandDistanceMoved - PlayerDistanceMoved));
+        /**
+        Get controller speed by subtracting left controller distance moved by how much the player has moved
+        and adding it with right controllers side.
+        */
+        ControllerSpeed = ((leftControllerDistanceMoved - playerDistanceMoved) + (rightControllerDistanceMoved - playerDistanceMoved));
 
-        if(Time.timeSinceLevelLoad > 1f){
-            transform.position += forwardDirection.transform.position * HandSpeed * Speed * Time.deltaTime;
-            PositionPreviousFrameLeftHand = PlayerPositionThisFrameLeftHand;
-            PositionPreviousFrameRightHand = PlayerPositionThisFrameRightHand;
-            PlayerPositionPreviousFrame = PlayerPositionThisFrame;
+        // if(Time.timeSinceLevelLoad > 1f)
+        // {
+            transform.position += Direction.transform.forward * ControllerSpeed * Speed * Time.deltaTime;
+        // }
 
+       
+        /**
+        Sets previous position of controllers and player to current position so that when the next update 
+        is called there is now a new position and the it continuously progresses.
+        */
+        PositionPreviousFrameLeftController = PositionCurrentFrameLeftController;
+        PositionPreviousFrameRightController = PositionCurrentFrameRightController;
+        PlayerPositionPreviousFrame = PlayerPositionCurrentFrame;
+         }
+    
         }
     }
-}
