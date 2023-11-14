@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Baruk Avatar Full
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: CG
+    m_Weight: 1
+  - m_Path: CG/Pelvis
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe0
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe0/L Toe01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe1/L Toe11
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe2
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe2/L Toe21
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe3
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe3/L Toe31
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe4
+    m_Weight: 1
+  - m_Path: CG/Pelvis/L Thigh/L Calf/L HorseLink/L Foot/L Toe4/L Toe41
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe0
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe0/R Toe01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe1/R Toe11
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe2
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe2/R Toe21
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe3
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe3/R Toe31
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe4
+    m_Weight: 1
+  - m_Path: CG/Pelvis/R Thigh/R Calf/R HorseLink/R Foot/R Toe4/R Toe41
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger0
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger0/L Finger01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger0/L Finger01/L Finger02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger1/L Finger11
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger1/L Finger11/L Finger12
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger2
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger2/L Finger21
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger2/L Finger21/L Finger22
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger3
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger3/L Finger31
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger3/L Finger31/L Finger32
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger4
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger4/L Finger41
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/L Clavicle/L UpperArm/L Forearm/L Hand/L
+      Finger4/L Finger41/L Finger42
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/L Lip Bottom01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/L Lip Bottom02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/R Lip Bottom01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/R Lip Bottom02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/Tongue01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Jaw/Tongue01/Tongue02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Cheek
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Ear01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Ear01/L Ear02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Eyebrow01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Eyebrow02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Eyebrow03
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L EyeCore
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L EyeCore/L Eye
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L EyeCore/L Lid Bottom
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L EyeCore/L Lid Upper
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Lip Upper01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/L Lip Upper02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/Nose
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Cheek
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Ear01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Ear01/R Ear02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Eyebrow01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Eyebrow02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Eyebrow03
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R EyeCore
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R EyeCore/R Eye
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R EyeCore/R Lid Bottom
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R EyeCore/R Lid Upper
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Lip Upper01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Neck1/Head/R Lip Upper02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger0
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger0/R Finger01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger0/R Finger01/R Finger02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger1
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger1/R Finger11
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger1/R Finger11/R Finger12
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger2
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger2/R Finger21
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger2/R Finger21/R Finger22
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger3
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger3/R Finger31
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger3/R Finger31/R Finger32
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger4
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger4/R Finger41
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Spine/Spine1/Spine2/R Clavicle/R UpperArm/R Forearm/R Hand/R
+      Finger4/R Finger41/R Finger42
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Tail01
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Tail01/Tail02
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Tail01/Tail02/Tail03
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Tail01/Tail02/Tail03/Tail04
+    m_Weight: 1
+  - m_Path: CG/Pelvis/Tail01/Tail02/Tail03/Tail04/Tail05
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 0
+  - m_Path: Werewolf_Eyes_PA
+    m_Weight: 0
+  - m_Path: Werewolf_PA_FUR
+    m_Weight: 0
+  - m_Path: Werewolf_PA_Mouth
+    m_Weight: 0
