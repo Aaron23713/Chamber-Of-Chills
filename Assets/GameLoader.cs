@@ -14,6 +14,10 @@ public class GameLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Chambers");
     }
+    public void ExitBtn()
+    {
+        Application.Quit();
+    }
 
 
     // Update is called once per frame

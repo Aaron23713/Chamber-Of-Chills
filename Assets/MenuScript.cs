@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using AlpaSunFade;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    [SerializeField] TransitionPanel t;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,10 @@ public class MenuScript : MonoBehaviour
     public void QuitScene(){
         Application.Quit();
 
+    }
+
+    public void FFade(){
+       
+        t.StartTransition(true, 0, 3);
     }
 }
