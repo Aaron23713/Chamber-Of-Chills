@@ -1,63 +1,110 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 
 public class Follow : MonoBehaviour
 {
     public Transform theTarget;
-    public Transform otherTarget;
-    // const float EPSILON = 0.1f;
-     
-     public Health myHealth;
-    public float speed;
-    public NavMeshAgent myAgent;
-
-    // private Vector3 velocity = Vector3.zero;
-    // Start is called before the first frame update
+    public float stoppingDistance = 2.0f; // Adjust this distance as needed
+    public float resumeDistance = 5.0f; // Adjust this distance as needed
+    public float destroyDistance = 20.0f; // Adjust this distance as needed
     public AudioSource heartBeat;
     public AudioSource flatline;
+    public int myHealth;
+
     public bool waiting = false;
-    private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
+    public Animator animator;
+
+    private bool hasPlayedAttackAnimation = false;
+
     void Start()
     {
-         navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.SetDestination(theTarget.transform.position);
+        // ... (Other initialization code)
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
-         if(waiting == false){
-            // otherTarget.transform.LookAt(theTarget.position);
-           
-            // if((otherTarget.transform.position - theTarget.position).magnitude > EPSILON){
-            //     otherTarget.transform.Translate(0.0f,0.0f, speed * Time.deltaTime);
-            // }
-            navMeshAgent.SetDestination(theTarget.transform.position);
-         }
-    }
+        if (!waiting)
+        {
+            float distanceToTarget = Vector3.Distance(transform.position, theTarget.position);
 
+            Debug.Log("Distance to Target: " + distanceToTarget);
 
-    public void OnTriggerEnter(Collider col){
-        if(col.gameObject.tag == "Player"){
-            Debug.Log("HIT FOUND");
-            if(myHealth.playerHealth >= 10){
-                flatline.Play();
-            }else{
-            myHealth.playerHealth++;
-            heartBeat.Play();
-            StartCoroutine(Timedelay());
-           
+            // Check if the enemy is close to the player
+            if (distanceToTarget <= stoppingDistance)
+            {
+                // Stop and play audio
+                Debug.Log("Stopping");
+                navMeshAgent.isStopped = true;
+                heartBeat.Play();
+                StartCoroutine(Timedelay());
+
+                // Play the attack animation only once
+                if (!hasPlayedAttackAnimation)
+                {
+                    StartCoroutine(PlayAttackAnimation());
+                    hasPlayedAttackAnimation = true;
+                }
+            }
+            else if (distanceToTarget > resumeDistance)
+            {
+                // Resume following the player
+                Debug.Log("Resuming");
+                navMeshAgent.isStopped = false;
+                navMeshAgent.SetDestination(theTarget.position);
+
+                // Reset the flag when resuming
+                hasPlayedAttackAnimation = false;
+            }
+
+            // Check if the enemy is too far from the player, then destroy it
+            if (distanceToTarget > destroyDistance)
+            {
+                Debug.Log("Destroying");
+                Destroy(gameObject);
             }
         }
     }
-    IEnumerator Timedelay(){
+
+    // ... (Other methods)
+
+    IEnumerator PlayAttackAnimation()
+    {
+        // Play the attack animation by name
+        animator.Play("Baruk_Attack_Bite_Front");
+
+        // Wait for the attack animation to finish
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Manually transition back to the default state
+        animator.Play("Baruk_Sprint_Forward"); // Replace "EntryState" with the name of your default state
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            StartCoroutine(PlayAttackAnimation());
+            
+            Debug.Log("HIT FOUND");
+            if (myHealth < 10)
+            {
+                myHealth++;
+            }
+        }
+    }
+     IEnumerator Timedelay()
+    {
         waiting = true;
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         waiting = false;
+
+        // Check if the player is still alive after the delay
+        if (myHealth >= 10)
+        {
+            flatline.Play();
+            Destroy(gameObject); // Destroy the enemy
+        }
     }
 }

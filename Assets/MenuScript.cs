@@ -28,6 +28,9 @@ public class MenuScript : MonoBehaviour
         Application.Quit();
 
     }
+    public void ReturnScene(){
+        SceneManager.LoadScene("Main Menu");
+    }
 
     public void FFade(){
        
