@@ -7,7 +7,7 @@ public class Follow : MonoBehaviour
     public Transform theTarget;
     public float stoppingDistance = 2.0f; // Adjust this distance as needed
     public float resumeDistance = 5.0f; // Adjust this distance as needed
-    public float destroyDistance = 20.0f; // Adjust this distance as needed
+    public float destroyDistance = 10.0f; // Adjust this distance as needed
     public AudioSource heartBeat;
     public AudioSource flatline;
     public int myHealth;
@@ -15,6 +15,7 @@ public class Follow : MonoBehaviour
     public bool waiting = false;
     public NavMeshAgent navMeshAgent;
     public Animator animator;
+    public heartMonitor heart;
 
     private bool hasPlayedAttackAnimation = false;
 
@@ -43,8 +44,8 @@ public class Follow : MonoBehaviour
                 // Play the attack animation only once
                 if (!hasPlayedAttackAnimation)
                 {
-                    StartCoroutine(PlayAttackAnimation());
-                    hasPlayedAttackAnimation = true;
+                    // StartCoroutine(PlayAttackAnimation());
+                    // hasPlayedAttackAnimation = true;
                 }
             }
             else if (distanceToTarget > resumeDistance)
@@ -69,29 +70,26 @@ public class Follow : MonoBehaviour
 
     // ... (Other methods)
 
-    IEnumerator PlayAttackAnimation()
-    {
-        // Play the attack animation by name
-        animator.Play("Baruk_Attack_Bite_Front");
+    // IEnumerator PlayAttackAnimation()
+    // {
+    //     // Play the attack animation by name
+    //     animator.Play("Baruk_Attack_Bite_Front");
 
-        // Wait for the attack animation to finish
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+    //     // Wait for the attack animation to finish
+    //     yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Manually transition back to the default state
-        animator.Play("Baruk_Sprint_Forward"); // Replace "EntryState" with the name of your default state
-    }
+    //     // Manually transition back to the default state
+    //     animator.Play("Baruk_Sprint_Forward"); // Replace "EntryState" with the name of your default state
+    // }
 
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
-            StartCoroutine(PlayAttackAnimation());
-            
+            // StartCoroutine(PlayAttackAnimation());
+            heart.manualHeartIncrease();
             Debug.Log("HIT FOUND");
-            if (myHealth < 10)
-            {
-                myHealth++;
-            }
+    
         }
     }
      IEnumerator Timedelay()

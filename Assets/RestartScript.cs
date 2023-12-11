@@ -24,6 +24,7 @@ public class RestartScript : MonoBehaviour
     {
         // Enable the input action when the script is enabled
         menu.Enable();
+    
     }
 
     private void OnDisable()
