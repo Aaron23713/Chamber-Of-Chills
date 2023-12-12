@@ -271,8 +271,9 @@ GameObject:
   - component: {fileID: 4305152164855304638}
   - component: {fileID: 6273112959112205175}
   - component: {fileID: 3744638122475937349}
+  - component: {fileID: 739376312782659898}
   m_Layer: 0
-  m_Name: ZoomButton
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -381,9 +382,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ZoomMirror, Assembly-CSharp
-        m_MethodName: ToggleZoom
+      - m_Target: {fileID: 739376312782659898}
+        m_TargetAssemblyTypeName: GameLoader, Assembly-CSharp
+        m_MethodName: StartBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -393,6 +394,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &739376312782659898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4828533118141278018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414d234ddbfaa82439b77d7d32b2cf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5529752850277401315
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +553,7 @@ GameObject:
   - component: {fileID: 2470331380681408441}
   - component: {fileID: 7763602501410062713}
   - component: {fileID: 1000332174735085473}
-  - component: {fileID: 2841302886149716811}
+  - component: {fileID: 3477632616771661814}
   m_Layer: 0
   m_Name: QuitButton
   m_TagString: Untagged
@@ -651,9 +664,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2841302886149716811}
-        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 3477632616771661814}
+        m_TargetAssemblyTypeName: GameLoader, Assembly-CSharp
+        m_MethodName: ExitBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -663,7 +676,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2841302886149716811
+--- !u!114 &3477632616771661814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -672,7 +685,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7332013533053083872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00056a2a42452754aa39b98eb68225d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 414d234ddbfaa82439b77d7d32b2cf5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8972043542296294464
@@ -706,7 +719,7 @@ Transform:
   m_Children:
   - {fileID: 8672891153400963896}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4039448879523358547
 MonoBehaviour:

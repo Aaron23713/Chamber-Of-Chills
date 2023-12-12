@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using UnityEngine;
 
-public class RotatingCrossSouth : MonoBehaviour
+public class RotatingCrossNorth : MonoBehaviour
 {
     // Start is called before the first frame update
   
@@ -24,7 +24,7 @@ void Update()
         if (elapsedTime < 5f)
         {
             Vector3 position = GetComponent<Renderer>().bounds.center;
-            transform.RotateAround(position, Vector3.right, 35 * Time.deltaTime);
+            transform.RotateAround(position, Vector3.left, 35 * Time.deltaTime);
             elapsedTime += Time.deltaTime;
         }
         else
@@ -40,4 +40,11 @@ void Update()
     elapsedTime = 0f;
     }
     }
+    void OnTriggerEnter(Collider other){
+        if(other.CompareTag("Player")){
+            Beginning();
+        }
+
+    }
 }
+

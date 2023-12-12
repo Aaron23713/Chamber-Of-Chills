@@ -13,6 +13,7 @@ public class GameLoader : MonoBehaviour
     public void StartBtn()
     {
         SceneManager.LoadScene("Chambers");
+
     }
     public void ExitBtn()
     {
@@ -20,9 +21,5 @@ public class GameLoader : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

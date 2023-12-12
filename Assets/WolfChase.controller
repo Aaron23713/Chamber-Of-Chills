@@ -79,7 +79,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: sdacads
+  m_Name: WolfChase
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

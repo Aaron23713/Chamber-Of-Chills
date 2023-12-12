@@ -15,6 +15,7 @@ public class WolfsDen : MonoBehaviour
     public AudioSource wolfSound;
     public bool oneTime = false;
     public GameObject wolf;
+    public GameObject click;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +38,12 @@ public class WolfsDen : MonoBehaviour
 
     IEnumerator TheWait()
     {
+        click.SetActive(false);
         aud.Play();
-
-        yield return new WaitForSeconds(23f);
-
         playerMotion.SetActive(false);
+        yield return new WaitForSeconds(22.335f);
+
+        
         lightShutOff.Play();
         player.SetActive(false);
         lighter.SetActive(false);
@@ -52,5 +54,6 @@ public class WolfsDen : MonoBehaviour
         player.SetActive(true);
         playerMotion.SetActive(true);
         wolf.SetActive(true);
+        click.SetActive(true);
     }
 }
