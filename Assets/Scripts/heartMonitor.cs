@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 public class heartMonitor : MonoBehaviour
 {
     private Image[] images;
@@ -13,6 +15,11 @@ public class heartMonitor : MonoBehaviour
   
     public bool hasPlayed = false;
     public int currentHeartLevel = 0;
+    public XRBaseController leftController;
+    public XRBaseController rightController;
+    public bool ANroom1 = false;
+
+
     
     
     // Start is called before the first frame update
@@ -35,6 +42,9 @@ public class heartMonitor : MonoBehaviour
         if (other.CompareTag("heartRace"))
         {
             audios[0].Play();
+            leftController.SendHapticImpulse(1.0f,1.5f);
+            rightController.SendHapticImpulse(1.0f,1.5f);
+
             if(currentHeartLevel == 0){
             audios[1].Play();
             }else{
@@ -51,6 +61,8 @@ public class heartMonitor : MonoBehaviour
     }
     public void manualHeartIncrease(){
         audios[0].Play();
+        leftController.SendHapticImpulse(1.0f,1.5f);
+        rightController.SendHapticImpulse(1.0f,1.5f);
         if(currentHeartLevel == 0){
             audios[1].Play();
             }else{
@@ -61,6 +73,24 @@ public class heartMonitor : MonoBehaviour
             }
         images[currentHeartLevel].color = myColor;
         currentHeartLevel++;
+    }
+    public void manualHeartIncreaseANroom1(){
+        if(ANroom1 == false){
+        audios[0].Play();
+        leftController.SendHapticImpulse(1.0f,1.5f);
+        rightController.SendHapticImpulse(1.0f,1.5f);
+        if(currentHeartLevel == 0){
+            audios[1].Play();
+            }else{
+                if(currentHeartLevel > 1 && audios[currentHeartLevel - 1].isPlaying){
+                     audios[currentHeartLevel - 1].Stop();
+                }
+                audios[currentHeartLevel].Play();
+            }
+        images[currentHeartLevel].color = myColor;
+        currentHeartLevel++;
+        ANroom1 = true;
+        }
     }
 
     IEnumerator TheWait()
