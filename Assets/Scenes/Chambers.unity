@@ -2098,7 +2098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83667717}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.378, y: -2.683, z: 2.6643}
+  m_LocalPosition: {x: -1.378, y: -2.683, z: 2.7}
   m_LocalScale: {x: 0.6394331, y: 0.4335356, z: 0.36138913}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8423,13 +8423,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1819858194}
+        m_TargetAssemblyTypeName: heartMonitor, Assembly-CSharp
+        m_MethodName: manualHeartIncreaseANroom1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8525,21 +8525,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020510146, y: 0.025707722, z: 0.007393816}
   m_Center: {x: -0.0082329875, y: 0.07017404, z: 0.015788158}
---- !u!114 &283830610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283830602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddbeff40a0a0f9941947b1f65b6016f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myColor: {r: 1, g: 0, b: 0, a: 1}
-  hasPlayed: 0
-  currentHeartLevel: 0
 --- !u!1 &285550526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 498996875318277139, guid: 3eabde1438282564a8f363a29b6a28f6, type: 3}
@@ -51153,9 +51138,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4415835526519443328, guid: bba6c2c70bff31a46bb4d6221e6c1a80, type: 3}
       insertIndex: -1
       addedObject: {fileID: 283830606}
-    - targetCorrespondingSourceObject: {fileID: -4415835526519443328, guid: bba6c2c70bff31a46bb4d6221e6c1a80, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 283830610}
   m_SourcePrefab: {fileID: 100100000, guid: bba6c2c70bff31a46bb4d6221e6c1a80, type: 3}
 --- !u!1 &1699441113 stripped
 GameObject:
@@ -54544,6 +54526,9 @@ MonoBehaviour:
   myColor: {r: 1, g: 0, b: 0, a: 1}
   hasPlayed: 0
   currentHeartLevel: 0
+  leftController: {fileID: 3756085037501023250}
+  rightController: {fileID: 3756085037501023249}
+  ANroom1: 0
 --- !u!82 &1819858196
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57861,6 +57846,9 @@ MonoBehaviour:
   myColor: {r: 1, g: 0, b: 0, a: 1}
   hasPlayed: 0
   currentHeartLevel: 0
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
+  ANroom1: 0
 --- !u!1001 &1889068196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63242,6 +63230,9 @@ MonoBehaviour:
   myColor: {r: 1, g: 0, b: 0, a: 1}
   hasPlayed: 0
   currentHeartLevel: 0
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
+  ANroom1: 0
 --- !u!4 &2058936887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4690879579366004, guid: 43b3bfc3c2f2ff146a8d85e63d0a4e26, type: 3}
@@ -66484,3 +66475,25 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 97876909}
   m_SourcePrefab: {fileID: 100100000, guid: 4dd10a37d2c6ff94197edefbf7c4e37b, type: 3}
+--- !u!114 &3756085037501023249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 335681373903091509, guid: 4dd10a37d2c6ff94197edefbf7c4e37b, type: 3}
+  m_PrefabInstance: {fileID: 3756085037501023248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3756085037501023250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 335681373324228565, guid: 4dd10a37d2c6ff94197edefbf7c4e37b, type: 3}
+  m_PrefabInstance: {fileID: 3756085037501023248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
